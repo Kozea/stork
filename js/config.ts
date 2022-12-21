@@ -23,7 +23,7 @@ export const defaultConfig: Readonly<Configuration> = {
   showCloseButton: true,
   minimumQueryLength: 3,
   forceOverwrite: false,
-  resultNoun: { singular: "file", plural: "files" },
+  resultNoun: { singular: "article", plural: "articles" },
   onQueryUpdate: undefined,
   onResultSelected: undefined,
   onResultsHidden: undefined,

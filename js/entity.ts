@@ -44,18 +44,18 @@ export class Entity {
     if (!this.domManager) return null;
     const query = this.domManager.getQuery();
     if (this.state === "error") {
-      return "Error! Check the browser console.";
+      return "Erreur! Vérifier dans la console...";
     } else if (this.state != "ready") {
-      return "Loading...";
+      return "Chargement...";
     } else if (query?.length < this.config.minimumQueryLength) {
-      return "Filtering...";
+      return "Recherche en cours...";
     } else if (this.results) {
       if (this.totalResultCount === 0) {
-        return `No ${this.config.resultNoun.plural} found.`;
+        return `Pas d'${this.config.resultNoun.plural} trouvés.`;
       } else if (this.totalResultCount === 1) {
-        return `1 ${this.config.resultNoun.singular} found.`;
+        return `1 ${this.config.resultNoun.singular} trouvé.`;
       } else {
-        return `${this.totalResultCount} ${this.config.resultNoun.plural} found.`;
+        return `${this.totalResultCount} ${this.config.resultNoun.plural} trouvés.`;
       }
     }
 
